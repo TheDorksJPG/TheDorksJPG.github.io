@@ -3,3 +3,9 @@ function saythatWasEasy() {
 thatWasEasy.play();
 }
 $("#easy").on("click", saythatWasEasy);
+$(document).keypress(delegateKeypress);
+function delegateKeypress(event) {
+    if (event.charCode){
+    $("#easy").trigger("click");
+    }
+}
